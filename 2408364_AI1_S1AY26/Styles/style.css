@@ -1,0 +1,235 @@
+:root
+{
+  --primary-color: #000000;
+  --secondary-color: #f2fbff;
+  --accent-color: #61d2ff;
+  --font-main: 'Roboto', Arial, sans-serif;
+  --border-radius: 10px;
+  --font-weight-main: 400;
+}
+
+body
+{
+  font-family: var(--font-main);
+  background: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+header, nav, main, section, footer, figure, article
+{
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.navbar
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 12px 20px;
+  gap: 10px;
+}
+
+.navbar ul
+{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a
+{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+.navbar a:hover,
+.navbar a:focus
+{
+  background: var(--accent-color);
+  color: #222;
+}
+
+.about-header
+{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img
+{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.profile-img:hover
+{
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.resume-card, .card
+{
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 2px 6px rgba(58,110,165, 0.1);
+}
+
+.storyboard-row, .palette-row
+{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.storyboard-group, .palette-group
+{
+  margin-bottom: 2rem;
+}
+
+.storyboard-row img, .palette-row img
+{
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #aaa8;
+}
+
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+table, th, td
+{
+  border: 1px solid var(--primary-color);
+}
+
+th, td 
+{
+  padding: 8px;
+  text-align: left;
+}
+
+ul, ol 
+{
+  padding-left: 24px;
+  margin: 12px 0;
+}
+
+footer
+{
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  border-radius: var(--border-radius);
+}
+
+footer a
+{
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+section:hover
+{
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+
+
+@media (max-width: 950px)
+{
+  .navbar ul
+  {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  
+  .navbar
+  {
+    justify-content: flex-start;
+  }
+
+  .navbar a
+  {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px)
+{
+  body
+  {
+    font-size: 16px;
+  }
+
+  .navbar
+  {
+    padding: 10px 16px;
+  }
+  
+  .navbar ul
+  {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .navbar a
+  {
+    font-size: 16px;
+    padding: 10px 2px;
+  }
+
+  .profile-img
+  {
+    width: 100px;
+    height: 100px;
+  }
+
+  main, section, footer, header, nav, .card, .resume-card
+  {
+    margin: 8px;
+    padding: 8px;
+  }
+}
+
+button, .navbar a
+{
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover
+{
+  background: var(--accent-color);
+  color: #222;
+  transform: scale(1.05);
+}
