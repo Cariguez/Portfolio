@@ -1,0 +1,118 @@
+<!--==================================
+    Name: Carlos Rodriguez
+    ID #:  2408364
+    Date: December 2, 2025
+    Lab Time: Tuesday, 3pm - 5pm
+    Lecturer: C.Anuli
+    ==================================-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Credit Card Rewards Campaign</title>
+        <!-- CSS Inclusion -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main>
+            <!-- "Hero" section giving the page a heading -->
+            <section class="hero">
+                <h1>Credit Card Rewards Campaign</h1>
+                <p>Earn cash back on flights, travel & restaurants!</p>
+            </section>
+
+            <!-- Card Types Table -->
+            <div class="about-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Credit Card Type</th>
+                            <th>Service Types</th>
+                            <th>Rewards</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SilverSaver<br><small>Code Silver</small></td>
+                            <td>Flights/Travel<br>Restaurants</td>
+                            <td>.05% Cash Back for purchases > $1500.00</td>
+                        </tr>
+                        <tr>
+                            <td>PlatinumBlue<br><small>Code Platinum</small></td>
+                            <td>Flights/Travel<br>Restaurants</td>
+                            <td>7% Cash Back for purchases > $1800.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--======================= 
+                FORM Section
+                =======================-->
+            <section class="form-container">
+                <form id="rewardsForm">
+                    <!-- 1) Names -->
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <span id="firstNameMsg" class="error-msg"></span> <!-- Holds The position for when there's an error message regarding their first name is to be displayed -->
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <span id="lastNameMsg" class="error-msg"></span> <!-- Holds The position for when there's an error message regarding their last name is to be displayed -->
+
+                    <!-- 2) Email -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="emailHelp" class="error-msg"></span> <!-- Holds The position for when there's an error message regarding the email is to be displayed -->
+
+                    <!-- 3) Statement Date -->
+                    <label for="statementDate">Statement Date:</label>
+                    <input type="date" id="statementDate" name="statementDate" required>
+
+                    <!-- 4) Account Number -->
+                    <label for="accountNumber">Account Number:</label>
+                    <input type="text" id="accountNumber" name="accountNumber" required placeholder="000-000-000">
+                    <span id="accountMsg" class="error-msg"></span> <!-- Holds The position for when there's an error message regarding their account number is to be displayed -->
+
+                    <!-- 5) CSV Number -->
+                    <label for="csvNumber">CSV Number:</label>
+                    <input type="text" id="csvNumber" name="csvNumber" required maxlength="3" value="123">
+                    <span id="csvHelp" class="error-msg"></span><!-- Holds The position for when there's an error message rgarding their CSV number is to be displayed -->
+
+                    <!-- 6) Total Purchases -->
+                    <label for="totalPurchases">Total Purchases:</label>
+                    <input type="number" id="totalPurchases" name="totalPurchases" disabled> <!-- a cost will be randomly generated -->
+
+                    <!-- Card Type Selection -->
+                    <label for="cardType">Card Type:</label>
+                    <select id="cardType" name="cardType" required>
+                        <option value="silver">SilverSaver</option>
+                        <option value="platinum">PlatinumBlue</option>
+                    </select>
+                    
+                    <!-- Buttons -->
+                    <div class="cart-actions">
+                        <button type="button" id="calculateBtn">Calculate & Save</button>
+                        <button type="reset" id="resetBtn">Reset</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Output Results -->
+            <section id="results" class="success-msg"></section> <!-- The javascript will display the results when the "calculateBtn" is pressed. -->
+            <section id="localStorageData" class="success-msg"></section> <!-- A Message from the javascript will be shown stating data has been stored, and also display the stored data when refreshed -->
+        </main>
+
+        <footer>
+            <span>&copy; Credit Card Rewards 2025 | Carlos Rodriguez</span>
+        </footer>
+
+        <!-- JavaScript Inclusion -->
+        <script src="script.js"></script>
+    </body>
+</html>
